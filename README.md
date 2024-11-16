@@ -10,3 +10,6 @@ Ryan Kwon, Emma Cho, Josh Wu
 * [] Denoising
     * Gaussian Kernel
     * Salt and Pepper Noise
+
+## References
+* [OpenAI/guided-diffusion](https://github.com/openai/guided-diffusion)
