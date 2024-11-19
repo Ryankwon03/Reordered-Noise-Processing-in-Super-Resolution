@@ -4,7 +4,7 @@ python super_res_upsample.py \
     --model_path models/64_256_upsampler.pt \
     --base_samples data/all_low_res.npz \
     --attention_resolutions 32,16,8 \
-    --class_cond False \
+    --class_cond True \
     --diffusion_steps 1000 \
     --large_size 256 \
     --small_size 64 \
@@ -16,7 +16,7 @@ python super_res_upsample.py \
     --resblock_updown True \
     --use_fp16 True \
     --use_scale_shift_norm True \
-    --batch_size 2 \
-    --num_samples 2 \
+    --batch_size 1 \
+    --num_samples 3 \
     --timestep_respacing 250
 

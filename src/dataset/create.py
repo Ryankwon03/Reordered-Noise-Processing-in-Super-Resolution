@@ -57,7 +57,7 @@ def create_low_res_npz(input_folder, output_file, labels_mapping=None):
 input_folder = "../../data/original/image1.jpg"  # Path to your image folder
 output_file = "../../data/low_res_1.npz"  # Output .npz file
 #labels_mapping = ["goldfish", "goat", "cat"]  # Labels in the order of images
-#labels_mapping = [0, 1, 2]
+labels_mapping = [0, 1, 2]
 #{"goldfish": 0, "goat": 1, "cat": 2}
 
 # Run the script

@@ -1,2 +1,9 @@
 Logging to ./results
 creating model...
+loading data...
+creating samples...
+created 1 samples
+created 2 samples
+created 3 samples
+saving to ./results\samples_3x256x256x3.npz
+sampling complete
