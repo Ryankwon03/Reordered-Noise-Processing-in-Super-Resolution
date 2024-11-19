@@ -1,0 +1,22 @@
+#!/bin/bash
+
+python super_res_upsample.py \
+    --model_path models/64_256_upsampler.pt \
+    --base_samples data/all_low_res.npz \
+    --attention_resolutions 32,16,8 \
+    --class_cond False \
+    --diffusion_steps 1000 \
+    --large_size 256 \
+    --small_size 64 \
+    --learn_sigma True \
+    --noise_schedule linear \
+    --num_channels 192 \
+    --num_heads 4 \
+    --num_res_blocks 2 \
+    --resblock_updown True \
+    --use_fp16 True \
+    --use_scale_shift_norm True \
+    --batch_size 2 \
+    --num_samples 2 \
+    --timestep_respacing 250
+
