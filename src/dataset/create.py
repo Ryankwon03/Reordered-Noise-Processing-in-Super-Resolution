@@ -54,7 +54,7 @@ def create_low_res_npz(input_folder, output_file, labels_mapping=None):
         print(f"Saved low-resolution images to {output_file}")
 
 # Parameters
-input_folder = "../../data/original/"  # Path to your image folder
+input_folder = "../../data/downsampled/"  # Path to your image folder
 output_file = "../../data/low_res_testing.npz"  # Output .npz file
 #labels_mapping = ["goldfish", "goat", "cat"]  # Labels in the order of images
 labels_mapping = [0, 1, 2]
