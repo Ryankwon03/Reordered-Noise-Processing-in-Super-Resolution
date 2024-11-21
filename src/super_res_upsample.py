@@ -5,11 +5,15 @@ of samples from a regular model from image_sample.py.
 
 import argparse
 import os
+import sys
 
 import blobfile as bf
 import numpy as np
 import torch as th
 import torch.distributed as dist
+
+dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(dir)
 
 from guided_diffusion import dist_util, logger
 from guided_diffusion.script_util import (
@@ -66,7 +70,7 @@ def main():
     arr = arr[: args.num_samples]
     if dist.get_rank() == 0:
         shape_str = "x".join([str(x) for x in arr.shape])
-        out_path = os.path.join(logger.get_dir(), f"samples_{shape_str}_{args.diffusion_steps}_downsampled.npz")
+        out_path = os.path.join(logger.get_dir(), f"input_{shape_str}_{args.diffusion_steps}.npz")
         logger.log(f"saving to {out_path}")
         np.savez(out_path, arr)
 

@@ -1,11 +1,11 @@
 #!/bin/bash
 
-python super_res_upsample.py \
+python src/super_res_upsample.py \
     --model_path models/64_256_upsampler.pt \
-    --base_samples data/low_res_downsample.npz \
+    --base_samples data/low_res_input.npz \
     --attention_resolutions 32,16,8 \
     --class_cond True \
-    --diffusion_steps 2500 \
+    --diffusion_steps 2000 \
     --large_size 256 \
     --small_size 64 \
     --learn_sigma True \
