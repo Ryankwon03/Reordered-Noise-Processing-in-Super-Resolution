@@ -2,7 +2,7 @@
 
 python src/super_res_upsample.py \
     --model_path models/64_256_upsampler.pt \
-    --base_samples data/low_res_input.npz \
+    --base_samples data/low_res_downsample.npz \
     --attention_resolutions 32,16,8 \
     --class_cond True \
     --diffusion_steps 2000 \
@@ -18,5 +18,5 @@ python src/super_res_upsample.py \
     --use_scale_shift_norm True \
     --batch_size 1 \
     --num_samples 3 \
-    --timestep_respacing 250
+    --timestep_respacing 1000
 

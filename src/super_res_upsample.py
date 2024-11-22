@@ -70,7 +70,7 @@ def main():
     arr = arr[: args.num_samples]
     if dist.get_rank() == 0:
         shape_str = "x".join([str(x) for x in arr.shape])
-        out_path = os.path.join(logger.get_dir(), f"input_{shape_str}_{args.diffusion_steps}.npz")
+        out_path = os.path.join(logger.get_dir(), f"downsample_{shape_str}_{args.diffusion_steps}.npz")
         logger.log(f"saving to {out_path}")
         np.savez(out_path, arr)
 
