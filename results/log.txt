@@ -5,5 +5,5 @@ creating samples...
 created 1 samples
 created 2 samples
 created 3 samples
-saving to ./results\downsample_3x256x256x3_2000.npz
+saving to ./results\downsample_3x256x256x3_1000.npz
 sampling complete

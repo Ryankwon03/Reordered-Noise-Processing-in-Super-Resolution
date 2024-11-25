@@ -44,7 +44,7 @@ def create_low_res_npz(input_folder, output_file, labels_mapping=None):
     print(f"Processed {len(low_res_images)} images into low resolution.")
 
     if labels_mapping:
-        labels = np.array(labels, dtype=int)  # Use string dtype for non-numeric labels
+        labels = np.array(labels, dtype=int)
         # Save images and labels
         np.savez(output_file, arr_0=low_res_images, arr_1=labels)
         print(f"Saved low-resolution images and labels to {output_file}")
@@ -55,7 +55,7 @@ def create_low_res_npz(input_folder, output_file, labels_mapping=None):
 
 # Parameters
 input_folder = "../../data/input/"  # Path to your image folder
-output_file = "../../data/low_res_downsample.npz"  # Output .npz file
+output_file = "../../data/low_res_input.npz"  # Output .npz file
 #labels_mapping = ["goldfish", "goat", "cat"]  # Labels in the order of images
 labels_mapping = [1, 350, 284] #from imagenet
 #{"goldfish": 1, "goat": 350, "cat": 284}
