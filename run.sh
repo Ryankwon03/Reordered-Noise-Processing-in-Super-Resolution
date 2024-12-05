@@ -2,10 +2,10 @@
 
 python src/super_res_upsample.py \
     --model_path models/64_256_upsampler.pt \
-    --base_samples data/low_res_input.npz \
+    --base_samples data/low_res_input_09.npz \
     --attention_resolutions 32,16,8 \
     --class_cond True \
-    --diffusion_steps 1000 \
+    --diffusion_steps 750 \
     --large_size 256 \
     --small_size 64 \
     --learn_sigma True \
