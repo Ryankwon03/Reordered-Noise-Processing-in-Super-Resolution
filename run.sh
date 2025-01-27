@@ -18,5 +18,5 @@ python src/super_res_upsample.py \
     --use_scale_shift_norm True \
     --batch_size 1 \
     --num_samples 3 \
-    --timestep_respacing 250
+    --timestep_respacing 250 \
 
